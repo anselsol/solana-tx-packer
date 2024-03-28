@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/anselsol"><img src="https://github.com/anselsol/solana-tx-packer/blob/main/assets/package.png?raw=true" alt="Solana Transactions Packer" width="320"></a>
+  <a href="https://github.com/anselsol"><img src="https://github.com/anselsol/solana-tx-packer/blob/main/assets/package-new.png?raw=true" alt="Solana Transactions Packer" width="320"></a>
 </p>
 
 <h2 align="center">
