@@ -33,7 +33,7 @@ const instructions: TransactionInstruction[] = Array(43).fill(0).map(() => {
 const { transactions } = await buildOptimalTransactions(connection, instructions, signerKey, []);
 ```
 
-This will return the following data:
+This operation will log the following data to the console in test mode:
 ```
 Priority fees:  100  / CUs:  3240
 Priority fees:  100  / CUs:  3240
