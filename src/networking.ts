@@ -109,7 +109,6 @@ export async function getSimulationUnits(
     replaceRecentBlockhash: true,
     sigVerify: false,
   });
-  console.log('simulation.value.err', simulation.value.err);
   if (simulation.value.err) {
     return undefined;
   }

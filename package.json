@@ -13,7 +13,8 @@
   "scripts": {
     "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
     "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check",
-    "test": "yarn run ts-mocha -r dotenv/config --import=tsx -t 1000000 tests/**/*.spec.ts"
+    "test": "yarn run ts-mocha -r dotenv/config --import=tsx -t 1000000 tests/**/*.spec.ts",
+    "pub": "rm -rf ./dist && tsc && npm version patch --force && npm publish --access public"
   },
   "dependencies": {
     "@solana/web3.js": "^1.91.2",
