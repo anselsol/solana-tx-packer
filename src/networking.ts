@@ -97,15 +97,15 @@ export async function getSimulationUnits(
   lookupTables: AddressLookupTableAccount[],
   computeErrorMargin: number = 800
 ): Promise<number | undefined> {
-  const testInstructions = [
-    ComputeBudgetProgram.setComputeUnitPrice({ microLamports: 100 }),
-    ComputeBudgetProgram.setComputeUnitLimit({ units: 1_400_000 }),
-    ...instructions,
-  ];
+  // const testInstructions = [
+  //   ComputeBudgetProgram.setComputeUnitPrice({ microLamports: 100 }),
+  //   ComputeBudgetProgram.setComputeUnitLimit({ units: 1_400_000 }),
+  //   ...instructions,
+  // ];
 
   const testVersionedTxn = new VersionedTransaction(
     new TransactionMessage({
-      instructions: testInstructions,
+      instructions,
       payerKey: payer,
       recentBlockhash: PublicKey.default.toString(),
     }).compileToV0Message(lookupTables)
@@ -115,6 +115,7 @@ export async function getSimulationUnits(
     replaceRecentBlockhash: true,
     sigVerify: false,
   });
+  console.log('simulation.value.err', simulation.value.err);
   if (simulation.value.err) {
     return undefined;
   }
