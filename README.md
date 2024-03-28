@@ -1,13 +1,13 @@
-# Solana transactions packer
+# 📦 Solana transactions packer
 Get your transactions confirmed.
 
-## What this packages does
+## 💁‍♀️ What this packages does
 Transform a list of instructions into as many Transactions as necessary with fine tuned Compute Units and Priority Fee setup.
 
-## What this packages does not do
+## 🙅 What this packages does not do
 Handle sending or confirming the transactions
 
-## Examples
+## Example
 Let's create a list of 43 basic SOL transfers from wallet A to wallets on devnet:
 ```ts
 const instructions: TransactionInstruction[] = Array(43).fill(0).map(() => {
