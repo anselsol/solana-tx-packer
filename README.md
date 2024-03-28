@@ -1,7 +1,6 @@
-<h1 align="center">
-  <br>
-  <a href="https://github.com/anselsol"><img src="https://github.com/anselsol/blob/main/assets/package.png?raw=true" alt="Solana transactions packer" width="320"></a>
-</h1>
+<p align="center">
+  <a href="https://github.com/anselsol"><img src="https://github.com/anselsol/solana-tx-packer/blob/main/assets/package.png?raw=true" alt="Solana transactions packer" width="320"></a>
+</p>
 
 <h2 align="center"><a href="https://solana.com/" target="_blank">Solana</a> transactions packer</h2>
 <h3 align="center">Get your transactions confirmed. Fast.</h3>
