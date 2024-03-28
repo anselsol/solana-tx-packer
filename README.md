@@ -33,9 +33,11 @@ The lib calculates a priority fee (here 100 is the default minimum) alongside th
 
 The CU budget gets a 8% error margin boost, just to be sure.
 
-`transactions` will contain a list of each 3 transaction with it's CU budget and priority fee attached. 
+`transactions` will contain a list of each 3 transactions with their CU budgets and priority fees instructions already included. 
 
-All you need to do is send them sequentially or in parallel depending on what you are doing 🤝
+All you need to do is send them sequentially or in parallel depending on what you are doing 
+
+Happy RPC spamming 🤝
 
 # Credits
 This software uses the following open source packages:
