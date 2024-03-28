@@ -2,8 +2,9 @@
   <a href="https://github.com/anselsol"><img src="https://github.com/anselsol/solana-tx-packer/blob/main/assets/package.png?raw=true" alt="Solana Transactions Packer" width="320"></a>
 </p>
 
-<h2 align="center"><a href="https://solana.com/" target="_blank">Solana</a> transactions packer</h2>
-<h3 align="center">Get your transactions confirmed. Fast. ⚡️</h3>
+<h2 align="center">
+  ⚡️ Get your transactions confirmed. Fast. ⚡️
+</h2>
 
 <p align="center">
   <a href="#example">Example</a> •
