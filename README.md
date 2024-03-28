@@ -3,7 +3,7 @@
 </p>
 
 <h2 align="center"><a href="https://solana.com/" target="_blank">Solana</a> transactions packer</h2>
-<h3 align="center">Get your transactions confirmed. Fast.</h3>
+<h3 align="center">Get your transactions confirmed. Fast. ⚡️</h3>
 
 <p align="center">
   <a href="#example">Key Features</a> •
@@ -61,3 +61,7 @@ Happy RPC spamming 🤝
 This software uses some code from the following open source packages:
 - [Mango v4](https://github.com/blockworks-foundation/mango-v4)
 - [Helium program library](https://github.com/helium/helium-program-library)
+
+
+# License
+MIT
