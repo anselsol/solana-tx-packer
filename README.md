@@ -3,7 +3,7 @@
 </p>
 
 <h2 align="center">
-  ⚡️ Get your transactions confirmed. Fast. ⚡️
+  ⚡️ Get your transactions ready for takeoff. ⚡️
 </h2>
 
 <p align="center">
