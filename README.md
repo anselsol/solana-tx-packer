@@ -1,5 +1,16 @@
-# 📦 Solana transactions packer
-Get your transactions confirmed.
+<h1 align="center">
+  <br>
+  <a href="https://github.com/anselsol"><img src="https://github.com/anselsol/blob/main/assets/package.png?raw=true" alt="Solana transactions packer" width="320"></a>
+</h1>
+
+<h2 align="center"><a href="https://solana.com/" target="_blank">Solana</a> transactions packer</h2>
+<h3 align="center">Get your transactions confirmed. Fast.</h3>
+
+<p align="center">
+  <a href="#example">Key Features</a> •
+  <a href="#running-tests">Running tests</a> •
+  <a href="#credits">Credits</a>
+</p>
 
 ## 💁‍♀️ What this packages does
 Transform a list of instructions into as many Transactions as necessary with fine tuned Compute Units and Priority Fee setup.
@@ -7,7 +18,7 @@ Transform a list of instructions into as many Transactions as necessary with fin
 ## 🙅 What this packages does not do
 Handle sending or confirming the transactions
 
-## Example
+# Example
 Let's create a list of 43 basic SOL transfers from wallet A to wallets on devnet:
 ```ts
 const instructions: TransactionInstruction[] = Array(43).fill(0).map(() => {
