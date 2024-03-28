@@ -36,3 +36,8 @@ The CU budget gets a 8% error margin boost, just to be sure.
 `transactions` will contain a list of each 3 transaction with it's CU budget and priority fee attached. 
 
 All you need to do is send them sequentially or in parallel depending on what you are doing 🤝
+
+# Credits
+This software uses the following open source packages:
+- [Mango v4](https://github.com/blockworks-foundation/mango-v4)
+- [Helium program library](https://github.com/helium/helium-program-library)

@@ -9,6 +9,8 @@ import {
   VersionedTransaction
 } from "@solana/web3.js";
 
+// Borrowed with love from 
+// https://github.com/blockworks-foundation/mango-v4/blob/57a9835aa8f636b6d231ba2c4008bfe89cbf08ba/ts/client/src/client.ts#L4552
 export async function estimatePrioritizationFee(
   connection: Connection,
   ixs: TransactionInstruction[],

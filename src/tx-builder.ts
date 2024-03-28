@@ -1,5 +1,3 @@
-// Using with love from the @helium repo
-
 import {
   ComputeBudgetProgram,
   Connection,
@@ -9,6 +7,8 @@ import {
 } from "@solana/web3.js";
 import { estimatePrioritizationFee } from "./networking";
 
+// Borrowed with love from Helium spl-utils package
+// https://github.com/helium/helium-program-library/blob/68da8e38e769a22bca0492156695b9677978d139/packages/spl-utils/src/transaction.ts#L766
 export async function batchInstructionsToTxsWithPriorityFee(
   connection: Connection,
   walletPubkey: PublicKey,
