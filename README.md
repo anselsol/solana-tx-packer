@@ -6,7 +6,7 @@
 <h3 align="center">Get your transactions confirmed. Fast. ⚡️</h3>
 
 <p align="center">
-  <a href="#example">Key Features</a> •
+  <a href="#example">Example</a> •
   <a href="#running-tests">Running tests</a> •
   <a href="#credits">Credits</a>
 </p>
