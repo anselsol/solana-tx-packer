@@ -39,6 +39,14 @@ All you need to do is send them sequentially or in parallel depending on what yo
 
 Happy RPC spamming 🤝
 
+# Running tests
+1. Duplicate the `.env-template`
+2. Change TEST_WALLET="wallet in uint8Array format" to the array representation of your private key (make sure to create a test wallet just for this)
+3. Go to `https://faucet.solana.com/` to load some SOL on this test wallet
+4. Install deps `yarn`
+5. Run tests `yarn test`
+6. Enjoy!
+
 # Credits
 This software uses some code from the following open source packages:
 - [Mango v4](https://github.com/blockworks-foundation/mango-v4)
