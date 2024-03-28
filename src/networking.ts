@@ -4,12 +4,10 @@ import {
   Connection,
   PublicKey,
   RecentPrioritizationFees,
-  Transaction,
   TransactionInstruction,
   TransactionMessage,
   VersionedTransaction
 } from "@solana/web3.js";
-import { batchInstructionsToTxsWithPriorityFee } from "./tx-builder";
 
 export async function estimatePrioritizationFee(
   connection: Connection,
@@ -96,7 +94,8 @@ export async function getSimulationUnits(
   connection: Connection,
   instructions: TransactionInstruction[],
   payer: PublicKey,
-  lookupTables: AddressLookupTableAccount[]
+  lookupTables: AddressLookupTableAccount[],
+  computeErrorMargin: number = 800
 ): Promise<number | undefined> {
   const testInstructions = [
     ComputeBudgetProgram.setComputeUnitPrice({ microLamports: 100 }),
@@ -119,44 +118,8 @@ export async function getSimulationUnits(
   if (simulation.value.err) {
     return undefined;
   }
-  return simulation.value.unitsConsumed;
-}
-
-export async function buildOptimalTransactions(
-  connection: Connection,
-  instructions: TransactionInstruction[],
-  signerKey: PublicKey,
-  lookupTables: AddressLookupTableAccount[]
-) {
-  // Add all instructions into as many transactions as needed
-  const txs: Transaction[] = await batchInstructionsToTxsWithPriorityFee(
-    connection,
-    signerKey,
-    instructions
-  );
-
-  const [microLamports, units, recentBlockhash] = await Promise.all([
-    estimatePrioritizationFee(connection, instructions, 100),
-    getSimulationUnits(connection, instructions, signerKey, lookupTables),
-    connection.getLatestBlockhash(),
-  ]);
-
-  console.log('Priority fees: ', microLamports, ' / CUs: ', units);
-
-  instructions.unshift(ComputeBudgetProgram.setComputeUnitPrice({ microLamports }));
-  if (units) {
-    // probably should add some margin of error to units
-    instructions.unshift(ComputeBudgetProgram.setComputeUnitLimit({ units }));
+  if (!simulation.value.unitsConsumed) {
+    return 200_000;
   }
-
-  return {
-    transaction: new VersionedTransaction(
-      new TransactionMessage({
-        instructions,
-        recentBlockhash: recentBlockhash.blockhash,
-        payerKey: signerKey
-      }).compileToV0Message(lookupTables)
-    ),
-    recentBlockhash,
-  };
+  return simulation.value.unitsConsumed * (1 + computeErrorMargin / 10_000);
 }
