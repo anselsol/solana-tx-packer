@@ -27,7 +27,7 @@ export async function buildOptimalTransactions(
       getSimulationUnits(connection, tx.instructions, signerKey, lookupTables)
     ]);
 
-    console.log('Priority fees: ', microLamportsEstimate, ' / CUs: ', computeUnits);
+    // console.log('Priority fees: ', microLamportsEstimate, ' / CUs: ', computeUnits);
 
     const instructions = [
       ComputeBudgetProgram.setComputeUnitLimit({

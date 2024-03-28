@@ -97,12 +97,6 @@ export async function getSimulationUnits(
   lookupTables: AddressLookupTableAccount[],
   computeErrorMargin: number = 800
 ): Promise<number | undefined> {
-  // const testInstructions = [
-  //   ComputeBudgetProgram.setComputeUnitPrice({ microLamports: 100 }),
-  //   ComputeBudgetProgram.setComputeUnitLimit({ units: 1_400_000 }),
-  //   ...instructions,
-  // ];
-
   const testVersionedTxn = new VersionedTransaction(
     new TransactionMessage({
       instructions,
