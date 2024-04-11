@@ -6,6 +6,7 @@
   ⚡️ Get your transactions ready for takeoff. ⚡️
 </h2>
 
+
 <p align="center">
   <a href="#example">Example</a> •
   <a href="#running-tests">Running tests</a> •
@@ -17,6 +18,18 @@ Transform a list of instructions into as many Transactions as necessary with fin
 
 ## 🙅 What this packages does not do
 Handle sending or confirming the transactions
+
+# Installation [![npm version](https://badge.fury.io/js/solana-tx-packer.svg)](https://badge.fury.io/js/solana-tx-packer)
+
+Yarn:
+```zsh
+yarn add solana-tx-packer
+```
+
+Npm:
+```zsh
+npm i solana-tx-packer
+```
 
 # Example
 Let's create a list of 43 basic SOL transfers from wallet A to wallets on devnet:
@@ -33,7 +46,14 @@ const instructions: TransactionInstruction[] = Array(43).fill(0).map(() => {
 const { transactions } = await buildOptimalTransactions(connection, instructions, signerKey, []);
 ```
 
-This will return the following data:
+`transactions` will contain a list of each 3 transactions (in this example) with their CU budgets and priority fees instructions already included as instructions.
+
+All you need to do is send them sequentially or in parallel depending on what you are doing 
+
+Happy RPC spamming 🤝
+
+## Details
+Internally, the function got this data for each of the 3 transactions (it's an example):
 ```
 Priority fees:  100  / CUs:  3240
 Priority fees:  100  / CUs:  3240
@@ -43,12 +63,6 @@ Priority fees:  100  / CUs:  1458
 The lib calculates a priority fee (here 100 is the default minimum) alongside the right CU budget.
 
 The CU budget gets a 8% error margin boost, just to be sure.
-
-`transactions` will contain a list of each 3 transactions with their CU budgets and priority fees instructions already included. 
-
-All you need to do is send them sequentially or in parallel depending on what you are doing 
-
-Happy RPC spamming 🤝
 
 # Running tests
 1. Duplicate the `.env-template`
