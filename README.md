@@ -34,6 +34,8 @@ npm i solana-tx-packer
 # Example
 Let's create a list of 43 basic SOL transfers from wallet A to wallets on devnet:
 ```ts
+import { buildOptimalTransactions } from "solana-tx-packer";
+
 const instructions: TransactionInstruction[] = Array(43).fill(0).map(() => {
   const targetWallet = Keypair.generate().publicKey;
   return SystemProgram.transfer({
