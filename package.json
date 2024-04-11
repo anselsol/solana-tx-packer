@@ -1,6 +1,6 @@
 {
   "name": "solana-tx-packer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Solana lib to send the most efficient transactions possible",
   "repository": "https://github.com/anselsol/solana-tx-packer.git",
   "author": "AnselSol",
@@ -17,7 +17,7 @@
     "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
     "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check",
     "test": "yarn run ts-mocha -r dotenv/config --import=tsx -t 1000000 tests/**/*.spec.ts",
-    "pub": "rm -rf ./dist && tsc && npm version minor --force && npm publish --access public"
+    "pub": "rm -rf ./dist && tsc && npm version patch --force && npm publish --access public"
   },
   "dependencies": {
     "@solana/web3.js": "^1.91.2",
