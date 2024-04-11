@@ -1,6 +1,6 @@
 {
   "name": "solana-tx-packer",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A Solana lib to send the most efficient transactions possible",
   "repository": "https://github.com/anselsol/solana-tx-packer.git",
   "author": "AnselSol",
@@ -10,6 +10,9 @@
   "files": [
     "/dist"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
     "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check",
