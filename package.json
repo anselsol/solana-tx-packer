@@ -1,6 +1,6 @@
 {
   "name": "solana-tx-packer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Solana lib to send the most efficient transactions possible",
   "repository": "https://github.com/anselsol/solana-tx-packer.git",
   "author": "AnselSol",
