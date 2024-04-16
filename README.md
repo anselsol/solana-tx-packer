@@ -56,6 +56,7 @@ Happy RPC spamming 🤝
 
 ## Details
 Internally, the function got this data for each of the 3 transactions (it's an example):
+
 ```
 Priority fees:  100  / CUs:  3240
 Priority fees:  100  / CUs:  3240
